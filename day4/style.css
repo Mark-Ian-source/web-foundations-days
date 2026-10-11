@@ -1,0 +1,131 @@
+
+:root {
+  --bg-color: #f4f6f8;
+  --card-color: #ffffff;
+  --text-color: #222222;
+  --muted-color: #666666;
+  --border-color: #dddddd;
+  --button-color: #2563eb;
+  --button-text: #ffffff;
+}
+
+body.dark {
+  --bg-color: #171717;
+  --card-color: #262626;
+  --text-color: #f5f5f5;
+  --muted-color: #bbbbbb;
+  --border-color: #444444;
+  --button-color: #3b82f6;
+  --button-text: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+header,
+footer {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+header p,
+footer p {
+  color: var(--muted-color);
+}
+
+.note-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font: inherit;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: 2px solid var(--button-color);
+  outline-offset: 2px;
+}
+
+#char-count,
+#word-count {
+  margin: 8px 0;
+  color: var(--muted-color);
+}
+
+.warning {
+  color: #d97706 !important;
+}
+
+.over {
+  color: #dc2626 !important;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--button-color);
+  color: var(--button-text);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+#clear-btn {
+  background-color: #64748b;
+}
+
+footer {
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .note-card {
+    padding: 16px;
+  }
+}
